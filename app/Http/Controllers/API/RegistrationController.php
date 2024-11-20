@@ -64,17 +64,17 @@ class RegistrationController extends Controller
     /**
      * Get all VSWA Head Quarters.
      */
-    // public function head_quarters()
-    // {
-    //     // Fetch all VSWA head quarters
-    //     $vswaHeadQuarters = VswaHeadQuarter::all();
+    public function head_quarters()
+    {
+        // Fetch all VSWA head quarters
+        $vswaHeadQuarters = VswaHeadQuarter::all();
 
-    //     // Return response with the fetched data
-    //     return response()->json([
-    //         'message' => 'VSWA Head Quarters retrieved successfully',
-    //         'data' => $vswaHeadQuarters
-    //     ], 200);
-    // }
+        // Return response with the fetched data
+        return response()->json([
+            'message' => 'VSWA Head Quarters retrieved successfully',
+            'data' => $vswaHeadQuarters
+        ], 200);
+    }
 
 
     /**
@@ -175,7 +175,7 @@ class RegistrationController extends Controller
             'password' => Hash::make($request->password),
             'vswa_hq_id' => $request->vswa_hq_id,
             'nature_of_authorization_id' => $request->nature_of_authorization_id,
-            'thematic_id' => $request->thematic_id,
+            //'thematic_id' => $request->thematic_id,
 
         ]);
 

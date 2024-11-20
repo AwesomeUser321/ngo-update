@@ -18,8 +18,5 @@ class VswaHeadQuarter extends Model
     {
         return $this->hasMany(User::class, 'vswa_hq_id');
     }
-
-
-    
  
 }
